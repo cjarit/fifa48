@@ -1,18 +1,34 @@
 import React from 'react'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
+//import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+import {ContainerBS} from '../components/bootstrap_layout'
+
+import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css'
+import './main.scss'
+
+import MainIdolImage from '../images/fifa_main.png'
+import FrontGraphic from '../images/front-graphic.png'
+import BackGraphic from '../images/back-graphic.png'
+//import FifaLandingImg from '../components/image'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
+    <div className="IdolLanding">
+      <ContainerBS>
+          <div className="EffectFront">
+            <img alt="BNK48" src={FrontGraphic}></img>
+          </div>
+          <div className="MainIdol">
+            <img alt="Fifa BNK48" src={MainIdolImage}></img>
+          </div>
+          <div className="EffectBack">
+          <img alt="BNK48" src={BackGraphic}></img>
+          </div>
+          <div className="CircleBg"></div>
+      </ContainerBS>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 

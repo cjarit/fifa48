@@ -1,0 +1,62 @@
+@import '../styling/color.scss';
+
+.MainIdol {
+  width: 74vh;
+  z-index: 3;
+  top: 7vh;
+  padding-right: 20px;
+  img {
+    width: 100%;
+  }
+  max-height: 1080px;
+}
+
+.MainIdol,
+.EffectFront,
+.EffectBack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.EffectFront {
+  width: 90vh;
+  top: 28vh;
+  z-index: 4;
+  padding-left: 10vh;
+  img {
+    width: 100%;
+  }
+}
+
+.EffectBack {
+  width: 90vh;
+  z-index: 2;
+  top: 18vh;
+  img {
+    width: 100%;
+  }
+}
+
+.CircleBg {
+  position: absolute;
+  background-color: $light-purple;
+  width: 100vh;
+  height: 100vh;
+  border-radius: 50%;
+  z-index: 1;
+  top: 22vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.IdolLanding {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $bg-light-grey;
+  .container {
+    position: relative;
+  }
+}

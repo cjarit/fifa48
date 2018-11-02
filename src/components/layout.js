@@ -32,7 +32,7 @@ const Layout = ({ children }) => (
             { rel: 'shortcut icon', type: 'image/png', href: `${Favicon}` },
           ]}
         >
-          <html lang="en" />
+          <html lang="th" />
         </Helmet>
         {children}
       </>

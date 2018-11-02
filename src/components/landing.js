@@ -1,5 +1,6 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Parallax } from 'react-scroll-parallax';
 //import Img from 'gatsby-image'
 //import { graphql } from 'gatsby'
 
@@ -17,15 +18,33 @@ const Landing = () => (
   <section id="Landing">
     <div className="IdolLanding">
       <ContainerBS>
-        <div className="EffectFront">
+      <Parallax
+        className="EffectFront"
+        offsetYMax={10}
+        offsetYMin={-10}
+        slowerScrollRate
+        >
           <img alt="BNK48" src={FrontGraphic} />
-        </div>
-        <div className="MainIdol">
+        </Parallax>
+        {/* <div className="MainIdol">
           <img alt="Fifa BNK48" src={MainIdolImage} />
-        </div>
-        <div className="EffectBack">
+        </div> */}
+        <Parallax
+        className="MainIdol"
+        offsetYMax={20}
+        offsetYMin={-20}
+        slowerScrollRate
+        >
+          <img alt="Fifa BNK48" src={MainIdolImage} />
+        </Parallax>
+        <Parallax
+        className="EffectBack"
+        offsetYMax={5}
+        offsetYMin={-5}
+        slowerScrollRate
+        >
           <img alt="BNK48" src={BackGraphic} />
-        </div>
+        </Parallax>
         <div className="CircleBg" />
         <div className="TitleTag">
           <h1>Fifa</h1>

@@ -23,8 +23,15 @@
   src: url('../fonts/kanit/Kanit-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Baijamjure';
+  src: url('../fonts/bai-jamjuree/BaiJamjuree-Regular.ttf') format('truetype');
+}
+
 $regular-font : 'Kanit';
 $light-font : 'KanitLight';
 $medium-font : 'KanitMedium';
 $semibold-font : 'KanitSemiBold';
 $bold-font : 'KanitBold';
+
+$read-regular-font : 'Baijamjure';

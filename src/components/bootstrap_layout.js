@@ -13,8 +13,20 @@ const ContainerBS = ({ children }) => (
   </div>
 )
 
+const ContainerNoRowBS = ({ children }) => (
+  <div className="container">
+    {children}
+  </div>
+)
+
 const RowBS = ({ children }) => (
   <div className="row">
+    {children}
+  </div>
+)
+
+const RowCenterBS = ({ children }) => (
+  <div className="row justify-content-center">
     {children}
   </div>
 )
@@ -27,4 +39,4 @@ RowBS.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export { ContainerBS, RowBS }
+export { ContainerBS, RowBS, ContainerNoRowBS, RowCenterBS }

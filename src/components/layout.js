@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './layout.scss'
+import Favicon from '../images/favicon.png'
+
+//import Header from './header'
+//import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+//import '../scss/layout.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,10 +28,12 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${Favicon}` },
+          ]}
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
         {children}
       </>
     )}

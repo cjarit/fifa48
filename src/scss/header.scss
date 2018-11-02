@@ -1,0 +1,262 @@
+@import './color.scss';
+@import './font.scss';
+@import './mixin.scss';
+
+.HeaderGroup {
+  position: fixed;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  z-index: 99;
+  transition: 0.3s;
+
+  .row {
+    align-items: center;
+  }
+
+  &.HeaderScrolled {
+    background: rgba(255, 255, 255, 0.94);
+    height: 50px;
+    box-shadow: 0 11px 10px -5px rgba(0, 0, 0, 0.08);
+    .Brand {
+      img {
+        width: 210px;
+      }
+    }
+
+    .Button {
+      padding: 3px 20px 7px 20px;
+      //height: 34px;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .Brand {
+    margin-right: auto;
+
+    img {
+      width: 239px;
+      transition: 0.3s;
+    }
+  }
+
+  @include breakpoint(xs) {
+    height: 70px;
+    .Brand {
+      img {
+        width: 210px;
+      }
+    }
+    .Button {
+      &.ButtonMain {
+        padding: 4px 20px 6px 20px;
+      }
+    }
+  }
+  @include breakpoint(xxs) {
+    height: 55px;
+    padding-left: 12px;
+    padding-right: 12px;
+    .Brand {
+      img {
+        width: 150px;
+      }
+    }
+    .Button {
+      &.ButtonMain {
+        padding: 4px 20px 6px 20px;
+        font-size: 0.875rem;
+      }
+    }
+    &.HeaderScrolled {
+      .Brand {
+        img {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+.Button {
+  font-size: 1rem;
+  padding: 6px 20px 10px 20px;
+  line-height: 1.65;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  border-radius: 999px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.ButtonMain {
+    color: white;
+    font-family: $medium-font;
+    background-image: $purple-gradient;
+    box-shadow: 0 6px 13px 0 rgba(80, 35, 137, 0.21), 0 5px 15px -6px rgba(132, 7, 240, 0.25);
+    padding: 8px 22px 12px 22px;
+
+    &.GoToIcon {
+      &:after {
+        color: white;
+      }
+    }
+  }
+
+  &.GoToIcon {
+    padding-right: 30px;
+
+    &:after {
+      right: 10px;
+    }
+  }
+
+  &.GoToIconHover {
+    padding-right: 20px;
+    transition: 0.3s;
+
+    &:after {
+      transition: 0.3s;
+      opacity: 0;
+      right: -10px;
+    }
+
+    &:hover {
+      padding-right: 30px;
+
+      &:after {
+        opacity: 1;
+        right: 10px;
+      }
+    }
+  }
+}
+
+.GoToIcon {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "\e844";
+    font-family: 'Feather Icon' !important;
+    font-size: 1rem;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &.GoToIconHover {
+    &:after {
+      opacity: 0;
+      right: 0px;
+    }
+  }
+}
+
+.NotList {
+  list-style: none !important;
+  padding: 0 !important;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+  li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.Nav {
+  margin-right: 20px;
+  padding-top: 2px;
+  color: $blacktext;
+  position: relative;
+  min-width: 80px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 2px;
+    background: $purple;
+    transition: width .3s;
+    margin-top: 4px;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    span {
+      color: $purple;
+    }
+
+    h6 {
+      color: $purple;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-family: $medium-font;
+    margin-bottom: -6px;
+    transition: 0.3s;
+    text-transform: uppercase;
+  }
+
+  span {
+    font-size: 0.75rem;
+    color: $greyfont;
+    transition: 0.3s;
+  }
+
+  @include breakpoint(max-md) {
+    display: none !important;
+  }
+}
+
+.NavGroup {
+  margin-right: 10px;
+  display: inline-flex;
+
+  .is-current {
+    .Nav {
+      &::after {
+        width: 100% !important;
+      }
+
+      span {
+        color: $purple;
+      }
+
+      h6 {
+        color: $purple;
+      }
+    }
+  }
+}

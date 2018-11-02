@@ -1,0 +1,391 @@
+@import './color.scss';
+@import './font.scss';
+@import './mixin.scss';
+
+.MainIdol {
+  width: 670px;
+  z-index: 3;
+  top: 5vh;
+  //padding-right: 20px;
+  right: 50px !important;
+  bottom: 0;
+  position: relative;
+  img {
+    width: 100%;
+  }
+  @include breakpoint(xs){
+    width: 600px;
+    left: -50px!important;
+    right: 0!important;
+    top: 2vh;
+  }
+  @include breakpoint(xxs) {
+    width: 360px;
+    top: 3vh;
+    left: -23px!important;
+  }
+}
+
+.IdolLanding {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $bg-light-grey;
+  max-height: 1080px;
+  position: relative;
+  @include breakpoint(xs){
+    max-height: 905px;
+  }
+  @include breakpoint(xxs){
+    max-height: 594px;
+  }
+  .container {
+    position: relative;
+    height: 100vh;
+    max-height: 1080px;
+    @include breakpoint(xs){
+      max-height: 905px;
+    }
+    @include breakpoint(xxs){
+      max-height: 594px;
+    }
+  }
+}
+
+.MainIdol,
+.EffectFront,
+.EffectBack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  pointer-events: none;
+}
+
+.EffectFront {
+  width: 790px;;
+  top: 26vh;
+  z-index: 4;
+  padding-left: 10vh;
+  img {
+    width: 100%;
+  }
+  @include breakpoint(max-sm){
+    width: 740px;
+  }
+  @include breakpoint(xs){
+    width: 680px;
+    left: -50px;
+  }
+  @include breakpoint(xxs){
+    width: 510px;
+    left: -20px;
+    top: 25vh;
+  }
+}
+
+.EffectBack {
+  width: 782px;
+  z-index: 2;
+  top: 15vh;
+  img {
+    width: 100%;
+  }
+  @include breakpoint(max-sm){
+    width: 742px;
+  }
+  @include breakpoint(xs){
+    width: 682px;
+    left: -50px;
+  }
+  @include breakpoint(xs){
+    width: 512px;
+    left: -20px;
+    top: 14vh;
+  }
+}
+
+.CircleBg {
+  position: absolute;
+  background-color: $light-purple;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  z-index: 1;
+  top: 21vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  @include breakpoint(max-sm){
+    width: 720px;
+    height: 720px;
+  }
+  @include breakpoint(xs){
+    width: 550px;
+    height: 550px;
+  }
+  @include breakpoint(xxs){
+    width: 550px;
+    height: 550px;
+  }
+  @include breakpoint(xxxs){
+    width: 400px;
+    height: 400px;
+    top: 16vh;
+  }
+}
+
+.TitleTag {
+  background-image: $purple-gradient;
+  box-shadow: 0 6px 14px 0 rgba(80, 35, 137, 0.21), 0 17px 20px -6px rgba(132, 7, 240, 0.25);
+  padding: 15px 25px 25px 25px;
+  position: absolute;
+  z-index: 10;
+  min-width: 410px;
+  bottom: 13vh;
+
+  h1,
+  h4,
+  h6 {
+    color: white;
+    line-height: 1;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: $bold-font;
+    font-size: 3.75rem;
+    text-transform: uppercase;
+    position: relative;
+    &:after {
+      content: '';
+      height: 5px;
+      width: 130px;
+      background-color: white;
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+  }
+
+  h6 {
+    font-family: $light-font;
+    font-size: 0.875rem;
+    &.Name {
+      margin-bottom: 25px;
+    }
+  }
+
+  h4 {
+    font-family: $semibold-font;
+    margin-bottom: 5px;
+  }
+  @include breakpoint(max-sm){
+    bottom: 41px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 500px;
+    padding-bottom: 35px;
+  }
+  @include breakpoint(xxs){
+    width: 100%;
+    min-width: auto;
+    bottom: 0;
+    padding: 8px 12px 32px 12px;
+    text-align: center;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      &:after {
+        display: none;
+      }
+    }
+    h4 {
+      font-size: 1.125rem;
+    }
+    h6 {
+      &.Name {
+        display: none;
+      }
+    }
+  }
+}
+
+.DotPatternTop {
+  width: 83px;
+  height: 83px;
+  top: 100px;
+  left: 0;
+  z-index: 5;
+  @include breakpoint(max-sm){
+    top: 90px;
+    width: 60px;
+    height: 60px;
+  }
+  @include breakpoint(xs){
+    display: none;
+  }
+}
+
+.DotPatternBottom {
+  width: 92px;
+  height: 92px;
+  right: 0;
+  bottom: 50px;
+  z-index: 5;
+  @include breakpoint(max-sm) {
+    width: 70px;
+    height: 70px;
+    bottom: 10px;
+  }
+  @include breakpoint(xs){
+    display: none;
+  }
+}
+
+.DotPatternTop,
+.DotPatternBottom {
+  position: absolute;
+
+  img {
+    width: 100%;
+  }
+}
+
+.SnsTopLabel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+  text-align: right;
+  z-index: 10;
+
+  h5 {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    font-family: $medium-font;
+  }
+
+  img {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 10px;
+  }
+
+  h6 {
+    color: $purple;
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+  }
+
+  a {
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  @include breakpoint(max-sm) {
+    display: none;
+  }
+
+  .LineDown {
+    height: 110px;
+    width: 7px;
+    background-color: $purple;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    bottom: -120px;
+  }
+}
+
+.ScrollDown {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+
+  h6 {
+    color: $blacktext;
+    font-size: 1rem;
+    @include breakpoint(max-sm){
+      display: none;
+    }
+  }
+
+  .DownButton {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 999px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    i {
+      font-size: 2rem;
+      color: $purple;
+      animation: MoveUpDown 1s ease-in-out infinite;
+    }
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+      text-decoration: none;
+    }
+  }
+  @include breakpoint(xxs){
+    bottom: 0px;
+    .DownButton {
+      background: rgba(255, 255, 255, 0);
+      box-shadow: none;
+      width: 30px;
+      height: 30px;
+      i {
+        font-size: 1.3rem;
+        color: white;
+      }
+    }
+  }
+}
+
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    padding-top: 5px;
+  }
+
+  50% {
+    padding-bottom: 10px;
+  }
+}
+
+////// Intro Section //////
+
+.Title {
+  &.PurpleBG {
+    height: 800px;
+    background: $purple-gradient;
+    @include breakpoint(xxs){
+      background: $purple-gradient-reverse;
+    }
+  }
+}
+
+@include breakpoint(xxs){
+  .HideOnXXS {
+    display: none!important;
+  }
+}

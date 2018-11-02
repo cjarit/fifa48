@@ -1,35 +1,29 @@
 import React from 'react'
-//import { Link } from 'gatsby'
-//import styled from 'styled-components'
+//import { graphql } from 'gatsby'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Layout from '../components/layout'
-import {ContainerBS} from '../components/bootstrap_layout'
+//import { ContainerBS } from '../components/bootstrap_layout'
+import Header from '../components/header'
+import Landing from '../components/landing'
 
-import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css'
-import './main.scss'
+import '../vendors/feather_icon/css/feather_icon.css'
 
-import MainIdolImage from '../images/fifa_main.png'
-import FrontGraphic from '../images/front-graphic.png'
-import BackGraphic from '../images/back-graphic.png'
-//import FifaLandingImg from '../components/image'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../scss/layout.scss'
+import '../scss/main.scss'
+import '../scss/header.scss'
 
 const IndexPage = () => (
-  <Layout>
-    <div className="IdolLanding">
-      <ContainerBS>
-          <div className="EffectFront">
-            <img alt="BNK48" src={FrontGraphic}></img>
-          </div>
-          <div className="MainIdol">
-            <img alt="Fifa BNK48" src={MainIdolImage}></img>
-          </div>
-          <div className="EffectBack">
-          <img alt="BNK48" src={BackGraphic}></img>
-          </div>
-          <div className="CircleBg"></div>
-      </ContainerBS>
-    </div>
-  </Layout>
+  <ParallaxProvider>
+    <Layout>
+      <Header />
+      <Landing />
+      <section id="Intro">
+        <div class="Title PurpleBG" />
+      </section>
+    </Layout>
+  </ParallaxProvider>
 )
 
 export default IndexPage

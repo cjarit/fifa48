@@ -1,0 +1,93 @@
+@import './color.scss';
+@import './font.scss';
+@import './mixin.scss';
+
+.FollowBoxGroup {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  .FollowBox {
+    background-color: white;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px 0 rgba(160,136,191,0.21), 0 17px 20px -6px rgba(145,86,197,0.25);
+    .BoxHead {
+      height: 100px;
+      width: 101%;
+      text-align: center;
+      margin-top: -4px;
+      &.Facebook {
+        background-image: $facebook-gradient;
+      }
+      &.Voov {
+        background-image: $voov-gradient;
+      }
+      &.Instagram {
+        background-image: $ig-gradient;
+      }
+      h6 {
+        color: white;
+        font-size: 1rem;
+        padding-top: 20px;
+        margin: 0;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-10px);
+      box-shadow: 0 12px 60px 0 rgba(160,136,191,0.31), 0 24px 30px -6px rgba(145,86,197,0.25);
+    }
+  }
+  .Avarta {
+    width: 90px;
+    height: 90px;
+    box-shadow: 0 5px 14px 0 rgba(0,0,0,0.15);
+    background-size: cover;
+    border-radius: 999px;
+    margin: 0 auto;
+    margin-top: -45px;
+    margin-bottom: 20px;
+    &.Facebook {
+      background-image: url('../images/follow/fb-profile.jpg');
+    }
+    &.FacebookFan {
+      background-image: url('../images/follow/fbfan-profile.jpg');
+    }
+    &.Voov {
+      background-image: url('../images/follow/voov-profile.jpg');
+    }
+    &.Instagram{
+      background-image: url('../images/follow/ig-profile.jpg');
+    }
+  }
+  .SocialID {
+    text-align: center;
+    margin-bottom: 20px;
+    img {
+      height: 24px;
+      width: 24px;
+      object-fit: contain;
+      margin-right: 6px;
+    }
+    span {
+      color: $blacktext;
+    }
+  }
+  .FooterBox {
+    padding: 10px 0px;
+    border-top: 1px solid $border-grey;
+    span {
+      color: $greyfont;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+#follow {
+  .PurpleBG {
+    height: 315px;
+  }
+}

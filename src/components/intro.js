@@ -21,7 +21,7 @@ import IconSem5th from '../images/sem-5th.png'
 
 const Intro = () => (
   <section id="Intro">
-    <div class="PurpleBG" />
+    <div className="PurpleBG" />
     <ContainerNoRowBS>
       <RowBS>
         <div className="SectionTitle">

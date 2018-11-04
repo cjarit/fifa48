@@ -2,20 +2,22 @@ import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Parallax } from 'react-scroll-parallax'
 import Fade from 'react-reveal/Fade'
-//import Img from 'gatsby-image'
-//import { graphql } from 'gatsby'
 
 import { ContainerBS } from './bootstrap_layout'
 
-import MainIdolImage from '../images/fifa_main.png'
-import FrontGraphic from '../images/front-graphic.png'
-import BackGraphic from '../images/back-graphic.png'
+//import MainIdolImage from '../images/fifa_main.png'
+//import FrontGraphic from '../images/front-graphic.png'
+//import BackGraphic from '../images/back-graphic.png'
 import DotPatternTri from '../images/dot-tri.png'
 import DotPatternRect from '../images/dot-rect.png'
 import FacebookIcon from '../images/social-logo/fb.png'
 import InstagramIcon from '../images/social-logo/ig.png'
 
-const Landing = () => (
+import FifaMain from '../images-query/fifa_main'
+import FrontGraphic from '../images-query/front-graphic'
+import BackGraphic from '../images-query/back-graphic'
+
+const Landing = (props) => (
   <section id="Landing">
     <div className="IdolLanding">
       <ContainerBS>
@@ -25,10 +27,9 @@ const Landing = () => (
           offsetYMin={-10}
           slowerScrollRate
         >
-          <Fade bottom
-          distance={'150px'}
-          delay={200}>
-            <img alt="BNK48" src={FrontGraphic} />
+          <Fade bottom distance={'150px'} delay={200}>
+            {/* <img alt="BNK48" src={FrontGraphic} /> */}
+            <FrontGraphic />
           </Fade>
         </Parallax>
         {/* <div className="MainIdol">
@@ -40,9 +41,9 @@ const Landing = () => (
           offsetYMin={-20}
           slowerScrollRate
         >
-          <Fade bottom
-          distance={'50px'}>
-            <img alt="Fifa BNK48" src={MainIdolImage} />
+          <Fade bottom distance={'50px'}>
+            {/* <img alt="Fifa BNK48" src={MainIdolImage} /> */}
+            <FifaMain />
           </Fade>
         </Parallax>
         <Parallax
@@ -51,7 +52,8 @@ const Landing = () => (
           offsetYMin={-5}
           slowerScrollRate
         >
-          <img alt="BNK48" src={BackGraphic} />
+          {/* <img alt="BNK48" src={BackGraphic} /> */}
+          <BackGraphic />
         </Parallax>
         <div className="CircleBg" />
         <div className="TitleTag">
@@ -82,7 +84,7 @@ const Landing = () => (
             <img alt="Fifa BNK48 Instagram Official" src={InstagramIcon} />
             <h6>bnk48official.fifa</h6>
           </a>
-          <div class="LineDown" />
+          <div className="LineDown" />
         </div>
         <div className="DotPatternTop">
           <img alt="BNK48" src={DotPatternTri} />
@@ -94,7 +96,7 @@ const Landing = () => (
       <div className="ScrollDown">
         <h6>รู้จักกับฟีฟ่า</h6>
         <AnchorLink href="#Intro" className="DownButton">
-          <i class="feather-icon icon-chevron-down" />
+          <i className="feather-icon icon-chevron-down" />
         </AnchorLink>
       </div>
     </div>

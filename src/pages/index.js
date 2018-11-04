@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import HomePage from '../components/homepage'
-import LoadingScreen from '../components/loading_screen'
+//import LoadingScreen from '../components/loading_screen'
 
 import '../vendors/feather_icon/css/feather_icon.css'
 
@@ -11,24 +11,8 @@ import '../scss/main.scss'
 import '../scss/header.scss'
 import '../scss/loading.scss'
 
-class IndexPage extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  state = {
-    loading: true,
-  }
-  componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 1500)
-  }
-
-  render() {
-    const { loading } = this.state
-    if (loading) {
-      return <LoadingScreen/>
-    }
-    return <HomePage />
-  }
-}
+const IndexPage = () => (
+  <HomePage></HomePage>
+)
 
 export default IndexPage

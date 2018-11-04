@@ -58,20 +58,26 @@ class Header extends React.Component {
               </AnchorLink>
             </li>
             <li>
+              <AnchorLink href="#Follow" className="Nav">
+                <h6>Follow</h6>
+                <span>ช่องทางติดตามฟีฟ่า</span>
+              </AnchorLink>
+            </li>
+            <li>
               <AnchorLink href="#Join" className="Nav">
                 <h6>Join Us</h6>
                 <span>เข้ากลุ่มแฟนคลับ</span>
               </AnchorLink>
             </li>
           </Scrollspy>
-          <a
+          {/* <a
             href="https://www.facebook.com/FifaBnk48Fans/"
             rel="noopener noreferrer"
             target="_blank"
             className="Button ButtonMain GoToIcon GoToIconHover"
           >
-            <span className="HideOnXXS">Donate & </span>Election
-          </a>
+            โปรเจคเลือกตั้ง
+          </a> */}
         </ContainerBS>
       </div>
     )

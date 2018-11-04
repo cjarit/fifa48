@@ -1,6 +1,7 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax'
+import Fade from 'react-reveal/Fade'
 //import Img from 'gatsby-image'
 //import { graphql } from 'gatsby'
 
@@ -18,30 +19,37 @@ const Landing = () => (
   <section id="Landing">
     <div className="IdolLanding">
       <ContainerBS>
-      <Parallax
-        className="EffectFront"
-        offsetYMax={10}
-        offsetYMin={-10}
-        slowerScrollRate
+        <Parallax
+          className="EffectFront"
+          offsetYMax={10}
+          offsetYMin={-10}
+          slowerScrollRate
         >
-          <img alt="BNK48" src={FrontGraphic} />
+          <Fade bottom
+          distance={'150px'}
+          delay={200}>
+            <img alt="BNK48" src={FrontGraphic} />
+          </Fade>
         </Parallax>
         {/* <div className="MainIdol">
           <img alt="Fifa BNK48" src={MainIdolImage} />
         </div> */}
         <Parallax
-        className="MainIdol"
-        offsetYMax={20}
-        offsetYMin={-20}
-        slowerScrollRate
+          className="MainIdol"
+          offsetYMax={20}
+          offsetYMin={-20}
+          slowerScrollRate
         >
-          <img alt="Fifa BNK48" src={MainIdolImage} />
+          <Fade bottom
+          distance={'50px'}>
+            <img alt="Fifa BNK48" src={MainIdolImage} />
+          </Fade>
         </Parallax>
         <Parallax
-        className="EffectBack"
-        offsetYMax={5}
-        offsetYMin={-5}
-        slowerScrollRate
+          className="EffectBack"
+          offsetYMax={5}
+          offsetYMin={-5}
+          slowerScrollRate
         >
           <img alt="BNK48" src={BackGraphic} />
         </Parallax>
@@ -74,7 +82,7 @@ const Landing = () => (
             <img alt="Fifa BNK48 Instagram Official" src={InstagramIcon} />
             <h6>bnk48official.fifa</h6>
           </a>
-          <div class="LineDown"></div>
+          <div class="LineDown" />
         </div>
         <div className="DotPatternTop">
           <img alt="BNK48" src={DotPatternTri} />

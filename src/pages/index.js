@@ -3,7 +3,7 @@ import React from 'react'
 import { ParallaxProvider } from 'react-scroll-parallax'
 //import ReadMoreReact from 'read-more-react';
 import Fade from 'react-reveal/Fade'
-import Page from 'react-page-loading'
+//import Page from 'react-page-loading'
 
 import Layout from '../components/layout'
 //import { ContainerBS } from '../components/bootstrap_layout'
@@ -30,7 +30,7 @@ import {
 
 const IndexPage = () => (
   <ParallaxProvider>
-    <Page loader={'rotate-spin'} color={'#9013FE'} size={6}>
+    {/* <Page loader={'rotate-spin'} color={'#9013FE'} size={6}> */}
       <Layout>
         <Header />
         <Landing />
@@ -159,7 +159,7 @@ const IndexPage = () => (
           </ContainerNoRowBS>
         </section>
       </Layout>
-    </Page>
+    {/* </Page> */}
   </ParallaxProvider>
 )
 

@@ -9,7 +9,7 @@ const FrontGraphic = () => (
         FrontGraphic: file(relativePath: { eq: "front-graphic.png" }) {
           childImageSharp {
             fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

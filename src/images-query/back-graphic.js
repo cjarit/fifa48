@@ -9,7 +9,7 @@ const BackGraphic = () => (
         BackGraphic: file(relativePath: { eq: "back-graphic.png" }) {
           childImageSharp {
             fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

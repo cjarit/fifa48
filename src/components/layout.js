@@ -4,8 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Favicon from '../images/favicon.png'
-
-import Footer from '../components/footer'
+import FifaShare from '../images/share-image.png'
 
 //import Header from './header'
 //import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -51,7 +50,7 @@ const Layout = ({ children }) => (
             },
             {
               property: 'og:image',
-              content: '../images/share-image.png',
+              content: `${FifaShare}`,
             },
             {
               property: 'og:type',

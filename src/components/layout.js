@@ -42,23 +42,27 @@ const Layout = ({ children }) => (
               content: 'http://www.fifabnk48.com/',
             },
             {
-              name: 'og:title',
+              name: 'robots',
+              content: 'all',
+            },
+            {
+              property: 'og:title',
               content: 'Fifa BNK48 Fansite : เว็บแฟนคลับฟีฟ่า BNK48',
             },
             {
-              name: 'og:image',
-              content: '../images/intro-image01.jpg',
+              property: 'og:image',
+              content: '../images/share-image.png',
             },
             {
-              name: 'og:type',
+              property: 'og:type',
               content: 'profile',
             },
             {
-              name: 'og:url',
+              property: 'og:url',
               content: 'http://www.fifabnk48.com/',
             },
             {
-              name: 'og:site_name',
+              property: 'og:site_name',
               content: 'Fifa BNK48 Fansite',
             },
             {

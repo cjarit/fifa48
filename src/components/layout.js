@@ -4,11 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Favicon from '../images/favicon.png'
-import FifaShare from '../images/share-image.png'
-
-//import Header from './header'
-//import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-//import '../scss/layout.scss'
+//import FifaShare from '../images/share-image.png'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -50,7 +46,7 @@ const Layout = ({ children }) => (
             },
             {
               property: 'og:image',
-              content: `${FifaShare}`,
+              content: 'https://www.fifabnk48.com/static/share-image-2db2058678cc7256b2a18aa439d7b681.png',
             },
             {
               property: 'og:type',

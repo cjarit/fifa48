@@ -76,7 +76,7 @@ const Layout = ({ children }) => (
             },
             {
               name: 'twitter:image',
-              content: 'https://i.imgur.com/H1oqs1a.png',
+              content: `${withPrefix('/src/img/share-image.png')}`,
             },
             {
               name: 'twitter:card',

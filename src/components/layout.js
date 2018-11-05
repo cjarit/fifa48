@@ -78,7 +78,6 @@ const Layout = ({ children }) => (
           <html lang="th" />
         </Helmet>
         {children}
-        <Footer />
       </>
     )}
   />

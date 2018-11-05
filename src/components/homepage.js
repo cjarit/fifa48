@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { ParallaxProvider } from 'react-scroll-parallax'
 //import Fade from 'react-reveal/Fade'
 
 import Layout from '../components/layout'
@@ -8,6 +7,7 @@ import Landing from '../components/landing'
 import Intro from '../components/intro'
 import Follow from '../components/follow'
 import Join from '../components/join'
+import Footer from '../components/footer'
 
 // import {
 //   ContainerNoRowBS,
@@ -20,15 +20,14 @@ export default class HomePage extends Component {
   render() {
     return (
       <>
-        <ParallaxProvider>
-          <Layout>
-            <Header />
-            <Landing />
-            <Intro />
-            <Follow />
-            <Join />
-          </Layout>
-        </ParallaxProvider>
+        <Layout>
+          <Header />
+          <Landing />
+          <Intro />
+          <Follow />
+          <Join />
+          <Footer />
+        </Layout>
       </>
     )
   }

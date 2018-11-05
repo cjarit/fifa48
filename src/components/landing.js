@@ -1,6 +1,6 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Parallax } from 'react-scroll-parallax'
+//import { Parallax } from 'react-scroll-parallax'
 import Fade from 'react-reveal/Fade'
 
 import { ContainerBS } from './bootstrap_layout'
@@ -17,45 +17,55 @@ import FifaMain from '../images-query/fifa_main'
 import FrontGraphic from '../images-query/front-graphic'
 import BackGraphic from '../images-query/back-graphic'
 
-const Landing = (props) => (
+const Landing = props => (
   <section id="Landing">
     <div className="IdolLanding">
       <ContainerBS>
-        <Parallax
+        {/* <Parallax
           className="EffectFront"
           offsetYMax={10}
           offsetYMin={-10}
           slowerScrollRate
-        >
+        > */}
+        <div className="EffectFront">
           <Fade bottom distance={'150px'} delay={200}>
             {/* <img alt="BNK48" src={FrontGraphic} /> */}
             <FrontGraphic />
           </Fade>
-        </Parallax>
+        </div>
+        {/* </Parallax> */}
         {/* <div className="MainIdol">
           <img alt="Fifa BNK48" src={MainIdolImage} />
         </div> */}
-        <Parallax
+        {/* <Parallax
           className="MainIdol"
           offsetYMax={20}
           offsetYMin={-20}
           slowerScrollRate
-        >
+        > */}
+        <div className="MainIdol">
           <Fade bottom distance={'50px'}>
             {/* <img alt="Fifa BNK48" src={MainIdolImage} /> */}
             <FifaMain />
           </Fade>
-        </Parallax>
-        <Parallax
+        </div>
+        {/* </Parallax> */}
+        {/* <Parallax
           className="EffectBack"
           offsetYMax={5}
           offsetYMin={-5}
           slowerScrollRate
-        >
-          {/* <img alt="BNK48" src={BackGraphic} /> */}
-          <BackGraphic />
-        </Parallax>
-        <div className="CircleBg" />
+        > */}
+        {/* <img alt="BNK48" src={BackGraphic} /> */}
+        <div className="EffectBack">
+          <Fade bottom distance={'100px'} delay={500}>
+            <BackGraphic />
+          </Fade>
+        </div>
+        {/* </Parallax> */}
+        <Fade bottom distance={'200px'} delay={800}>
+          <div className="CircleBg" />
+        </Fade>
         <div className="TitleTag">
           <h1>Fifa</h1>
           <h6 className="Name">ปวีณ์ธิดา สกุลพิพัฒน์</h6>

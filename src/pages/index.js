@@ -13,6 +13,7 @@ import '../scss/loading.scss'
 import '../scss/followbox.scss'
 import '../scss/intro.scss'
 import '../scss/join.scss'
+import '../scss/footer.scss'
 
 class IndexPage extends React.Component {
 

@@ -8,7 +8,8 @@
   background: $purple-gradient;
   position: absolute;
   z-index: -1;
-  @include breakpoint(xxs){
+
+  @include breakpoint(xxs) {
     background: $purple-gradient-reverse;
   }
 }
@@ -18,21 +19,27 @@
   display: block;
   width: 100%;
   padding: 60px 0px 20px 0px;
+  @include breakpoint(xxxs){
+    padding-top: 50px;
+  }
   h5 {
     text-transform: uppercase;
     color: white;
     font-size: 1.5rem;
     letter-spacing: 4.45px;
     font-family: $light-font;
-    @include breakpoint(xxs){
+
+    @include breakpoint(xxs) {
       font-size: 1.25rem;
     }
   }
+
   h2 {
     font-family: $medium-font;
-    color:white;
+    color: white;
     font-size: 2.25rem;
-    @include breakpoint(xxs){
+
+    @include breakpoint(xxs) {
       font-size: 2.15rem;
     }
   }
@@ -45,13 +52,16 @@
   height: 344px;
   box-shadow: 0 35px 32px -18px rgba(0, 0, 0, 0.12);
   margin-bottom: 40px;
+
   @include breakpoint (max-sm) {
     box-shadow: none;
   }
+
   @include breakpoint (xxs) {
     height: 290px;
     padding: 0px 12px;
   }
+
   .Img {
     display: inline-block;
     box-sizing: border-box;
@@ -59,6 +69,7 @@
     background-size: cover;
     position: absolute;
   }
+
   .FrontImg {
     left: 0;
     right: 0;
@@ -67,32 +78,39 @@
     height: 344px;
     background-image: url('../images//intro-image01.jpg');
     z-index: 2;
+
     @include breakpoint (xs) {
       width: 100%;
     }
+
     @include breakpoint (max-sm) {
       box-shadow: 0 35px 32px -18px rgba(0, 0, 0, 0.12);
     }
+
     @include breakpoint (xxs) {
       height: 290px;
       position: relative;
     }
   }
+
   .BackLeftImg,
   .BackRightImg {
     z-index: 1;
     bottom: 0;
     width: 325px;
     height: 275px;
-    @include breakpoint(max-sm){
+
+    @include breakpoint(max-sm) {
       display: none;
     }
   }
+
   .BackRightImg {
     right: 0;
     background-image: url('../images//intro-image03.jpg');
     background-position: right top;
   }
+
   .BackLeftImg {
     left: 0;
     background-image: url('../images//intro-image02.jpg');
@@ -103,269 +121,370 @@
 .TextContent {
   position: relative;
   margin-bottom: 70px;
+
   p {
     font-family: $read-regular-font;
     font-size: 1.125rem;
     color: $blacktext;
     line-height: 2;
+
+    em {
+      color: $greyfont;
+      font-style: initial;
+    }
   }
+
   a {
     color: $purple;
     text-decoration: underline;
     font-weight: bold;
   }
+
   .Hide {
-    height: 200px;
+    height: 270px;
     overflow: hidden;
     position: relative;
+
     &:after {
       content: '';
       position: absolute;
       width: 100%;
-      background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
+      background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.00) 0%, #FFFFFF 100%);
       height: 120px;
       bottom: 0;
       left: 0;
     }
   }
+
   .Show {
     height: auto;
     overflow: auto;
   }
 }
 
-@include breakpoint(xxs){
-.HideOnXXS {
-  display: none!important;
-}
+@include breakpoint(xxs) {
+  .HideOnXXS {
+    display: none !important;
+  }
 }
 
 .ReadMoreButton {
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-color: $blacktext;
-padding: 6px 14px 6px 18px;
-background: #FFFFFF;
-box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.20);
-border: 1px solid transparent;
-outline: 0;
-border-radius: 100px;
-transition: 0.3s;
-cursor: pointer;
-&:hover {
-  border: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $blacktext;
+  padding: 6px 14px 6px 18px;
+  background: #FFFFFF;
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.20);
+  border: 1px solid transparent;
   outline: 0;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.18);
-  border: 1px solid $border-grey;
-}
-&:focus{
-  border: 0;
-  outline: 0;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.18);
-  border: 1px solid $border-grey;
-}
+  border-radius: 100px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    border: 0;
+    outline: 0;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.18);
+    border: 1px solid $border-grey;
+  }
+
+  &:focus {
+    border: 0;
+    outline: 0;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.18);
+    border: 1px solid $border-grey;
+  }
 }
 
 .IntroListGroup {
-margin-bottom: 40px;
-@include breakpoint(xs){
-  margin-bottom: 15px;
-}
-.IntroListRow {
-  margin-bottom: 30px;
-  @include breakpoint(xs){
-    margin-bottom: 0px;
+  margin-bottom: 40px;
+
+  @include breakpoint(xs) {
+    margin-bottom: 15px;
   }
-  .IntroList{
-    display: flex;
-    @include breakpoint(xs){
-      margin-bottom: 30px;
+
+  .IntroListRow {
+    margin-bottom: 30px;
+
+    @include breakpoint(xs) {
+      margin-bottom: 0px;
     }
-    img {
-      width: 65px;
-      height: 65px;
-      margin-right: 30px;
-      pointer-events: none;
-    }
-    h6 {
-      font-family: $medium-font;
-      font-size: 1rem;
-      color: $blacktext;
-    }
-    p {
-      font-family: $read-regular-font;
-      font-size: 0.875rem;
-      margin-bottom: 10px;
-      color: $blacktext;
-    }
-    a {
-      color: $purple;
-      position: relative;
-      span {
-        text-decoration: underline;
-        margin-right: 4px;
+
+    .IntroList {
+      display: flex;
+
+      @include breakpoint(xs) {
+        margin-bottom: 30px;
       }
-      i {
+
+      img {
+        width: 65px;
+        height: 65px;
+        margin-right: 30px;
+        pointer-events: none;
+      }
+
+      h6 {
+        font-family: $medium-font;
         font-size: 1rem;
-        position: absolute;
-        top: 5px;
+        color: $blacktext;
+      }
+
+      p {
+        font-family: $read-regular-font;
+        font-size: 0.875rem;
+        margin-bottom: 10px;
+        color: $blacktext;
+      }
+
+      a {
+        color: $purple;
+        position: relative;
+
+        span {
+          text-decoration: underline;
+          margin-right: 4px;
+        }
+
+        i {
+          font-size: 1rem;
+          position: absolute;
+          top: 5px;
+        }
       }
     }
   }
-}
 }
 
 .Profile {
-margin-top: 30px;
-margin-bottom: 20px;
-//display: flex;
-.ProfilePhoto {
-  //width: 40%;
-  min-height: 430px;
-  box-sizing: border-box;
-  border: 10px solid white;
-  box-shadow: 0 0 10px -5px rgba(0,0,0,0.11), 0 0 41px -9px rgba(0,0,0,0.21);
-  background-image: url('../images/profile.jpg');
-  background-size: cover;
-  //margin-right: 30px;
-  position: absolute;
-  width: calc(100% - 30px);
-  left: 15px;
-  top: 0;
-  z-index: 1;
-  @include breakpoint(max-sm) {
-    position: relative;
-    left: 0;
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
-}
-.Details {
-  display: flex;
-  flex-wrap: wrap;
-  .ColumnLeft {
-    width: 33.33%;
-    flex: 0 0 33.33%;
-  }
-  .ColumnRight {
-    width: 66.67%;
-    flex: 0 0 66.67%;
-  }
-  @include breakpoint(max-sm)  {
-    max-width: 450px;
-    margin: 0 auto;
-  }
-}
+  margin-top: 30px;
+  margin-bottom: 20px;
 
-.ProfileText {
-  .Name {
-    margin-bottom: 25px;
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 5px;
-      color: $blacktext;
-      em {
-        font-style: initial;
-        color: $purple;
+  //display: flex;
+  .ProfilePhoto {
+    //width: 40%;
+    min-height: 430px;
+    box-sizing: border-box;
+    border: 10px solid white;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.11), 0 0 41px -9px rgba(0, 0, 0, 0.21);
+    background-image: url('../images/profile.jpg');
+    background-size: cover;
+    //margin-right: 30px;
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+    top: 0;
+    z-index: 1;
+
+    @include breakpoint(max-sm) {
+      position: relative;
+      left: 0;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(xxxs) {
+      min-height: 300px;
+      background-position: center;
+    }
+  }
+
+  .Details {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ColumnLeft {
+      width: 33.33%;
+      flex: 0 0 33.33%;
+
+      @include breakpoint(xxxs) {
+        width: 100%;
+        flex: 0 0 100%;
       }
     }
-    @include breakpoint(max-sm)  {
+
+    .ColumnRight {
+      width: 66.67%;
+      flex: 0 0 66.67%;
+
+      @include breakpoint(xxxs) {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+
+    @include breakpoint(max-sm) {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(xxxs) {
       text-align: center;
     }
   }
-  .Detail {
-    margin-bottom: 25px;
-    h6 {
-      color: $greyfont;
-      font-size: 0.875rem;
-      margin-bottom: 4px;
+
+  .ProfileText {
+    .Name {
+      margin-bottom: 25px;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        color: $blacktext;
+
+        em {
+          font-style: initial;
+          color: $purple;
+        }
+      }
+
+      @include breakpoint(max-sm) {
+        text-align: center;
+      }
     }
-    p {
-      color: $blacktext;
+
+    .Detail {
+      margin-bottom: 25px;
+
+      h6 {
+        color: $greyfont;
+        font-size: 0.875rem;
+        margin-bottom: 4px;
+
+        @include breakpoint(xxxs) {
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        color: $blacktext;
+
+        @include breakpoint(xxxs) {
+          font-size: 1.125rem;
+        }
+      }
+
+      @include breakpoint(xxxs) {
+        margin-bottom: 20px;
+      }
     }
   }
-}
-.Reference {
-  font-size: 0.875rem;
-  color: $greyfont;
-  font-family: $light-font;
-  //margin-top: 10px;
-  @include breakpoint(max-sm){
-    width: 100%;
-    text-align: center;
+
+  .Reference {
+    font-size: 0.875rem;
+    color: $greyfont;
+    font-family: $light-font;
+
+    //margin-top: 10px;
+    @include breakpoint(max-sm) {
+      width: 100%;
+      text-align: center;
+    }
   }
-}
 }
 
 .PortfolioBG {
-width: 100%;
-height: 100%;
-background: $deep-black;
-position: relative;
-padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  background: $deep-black;
+  position: relative;
+  padding-bottom: 50px;
+  @include breakpoint(max-sm){
+    padding-bottom: 30px;
+  }
 }
 
-.Portfolio  {
-.SubSectionTitle {
-  margin-top: 150px;
-  margin-bottom: 40px;
-  @include breakpoint(max-sm) {
-    margin-top: 30px;
-  }
-  h3 {
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-}
 .Portfolio {
-  width: 100%;
-  min-height: 1px;
-  a {
-    cursor: pointer;
-    width: 100%;
-    display: block;
-    position: relative;
-    transition: 0.3s;
-    &:hover {
-      transform: scale(1.05,1.05);
+  .SubSectionTitle {
+    margin-top: 150px;
+    margin-bottom: 40px;
+
+    @include breakpoint(max-sm) {
+      margin-top: 30px;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+      font-size: 1.5rem;
     }
   }
-  .Item {
-    height: 350px;
-    background-size: cover;
-    background-position: center center;
-  }
-  .Description {
-    position: absolute;
-    left: 0;
+
+  .Portfolio {
     width: 100%;
-    bottom: 0;
-    display: block;
-    text-align: center;
-    padding: 12px 0px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 1rem;
-    font-family: $medium-font;
+    min-height: 1px;
+
+    a {
+      cursor: pointer;
+      width: 100%;
+      display: block;
+      position: relative;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.05, 1.05);
+      }
+    }
+
+    .Item {
+      height: 350px;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .Description {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      display: block;
+      text-align: center;
+      padding: 12px 0px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 1rem;
+      font-family: $medium-font;
+    }
+
+    .Hamburger {
+      background-image: url('../images/portfolio-hamburger.jpg');
+    }
+
+    .ThaiBall {
+      background-image: url('../images/portfolio-thaifootball.jpg');
+    }
+
+    .GDC {
+      background-image: url('../images/portfolio-movies.jpg');
+    }
   }
-  .Hamburger {
-    background-image: url('../images/portfolio-hamburger.jpg');
+
+  .ColPort3 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include breakpoint(max-sm) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    @include breakpoint(xxs) {
+      margin-bottom: 12px;
+      padding-right: 6px;
+      padding-left: 6px;
+      .Item {
+        height: 230px;
+      }
+      .Description {
+        padding: 8px 0;
+      }
+    }
   }
-  .ThaiBall {
-    background-image: url('../images/portfolio-thaifootball.jpg');
-  }
-  .GDC {
-    background-image: url('../images/portfolio-movies.jpg');
-  }
-}
-.ColPort3 {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
 }

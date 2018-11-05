@@ -1,0 +1,175 @@
+@import './color.scss';
+@import './font.scss';
+@import './mixin.scss';
+
+.JoinCommunityWrapper {
+  width: 100%;
+}
+
+.JoinCommunity {
+  margin-top: 70px;
+  
+  @include breakpoint(xs) {
+    padding: 0;
+  }
+
+  .SectionTitle {
+    h2 {
+      position: relative;
+      display: inline-block;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 13px;
+        background-color: $purple;
+        left: 0;
+        bottom: 3px;
+        z-index: -1;
+      }
+    }
+    @media (max-width: 520px) {
+      h2 {
+        span {
+          white-space: nowrap;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .FifaArenaLogo,
+  .SectionTitle,
+  .FollowTicketGroup {
+    position: relative;
+    z-index: 2;
+  }
+
+  .FifaArenaLogo {
+    position: absolute;
+    top: -64px;
+    left: 50%;
+    transform: translateX(-50%);
+    //background-color: white;
+    border-radius: 999px;
+
+    img {
+      height: 128px;
+      box-shadow: 0 -2px 14px 0 rgba(0, 0, 0, 0.16);
+      border-radius: 999px;
+    }
+  }
+
+  .SectionTitle {
+    padding-top: 90px;
+  }
+
+  .FollowTicketGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: -90px;
+    width: 100%;
+    justify-content: center;
+    @include breakpoint(xs){
+      margin-top: -120px;
+    }
+    @include breakpoint(xxxs){
+      margin-top: -140px;
+    }
+  }
+
+  .FollowTicketWrapper {
+    width: 240px;
+    padding: 8px;
+    .FollowTicket {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      transition: 0.3s;
+      .Content {
+        h5 {
+          font-family: $medium-font;
+          font-size: 1rem;
+          color: $blacktext;
+        }
+        .QRGroup {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          .QRCode {
+            margin-right: 16px;
+            img {
+              width: 90px;
+              height: 90px;
+            }
+          }
+          .Logo {
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
+      .Signifier {
+        position: absolute;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid $border-grey;
+        i {
+          color: $blacktext;
+          font-size: 1.125rem;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        transform: translateY(-8px) scale(1.05,1.05);
+      }
+    }
+  }
+}
+
+.JoinBG {
+  background-color: $deep-black;
+  height: 400px;
+  width: 100%;
+  z-index: 1;
+  margin-top: -350px;
+  @include breakpoint(max-sm) {
+    height: 550px;
+    margin-top: -510px;
+  }
+}
+
+.FanDomBG {
+  background-image: url('../images/follow/fandom.jpg');
+  height: 370px;
+  background-size: cover;
+  //background-position: center center;
+  position: relative;
+  z-index: 2;
+  background-position: center;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #2D213A;
+    opacity: 0.7;
+  }
+}

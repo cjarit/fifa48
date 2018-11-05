@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@reach/router'
 import Scrollspy from 'react-scrollspy'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+//import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 //import { Link } from 'gatsby'
 
 import FifaPageLogo from '../images/fifa-page-logo.png'
@@ -15,7 +15,7 @@ class Header extends React.Component {
       hasScrolled: false,
       modal: false,
     }
-    this.toggleSoon = this.toggleSoon.bind(this);
+    this.toggleSoon = this.toggleSoon.bind(this)
   }
 
   componentDidMount() {
@@ -34,8 +34,8 @@ class Header extends React.Component {
 
   toggleSoon() {
     this.setState({
-      modal: !this.state.modal
-    });
+      modal: !this.state.modal,
+    })
   }
 
   render() {
@@ -43,7 +43,9 @@ class Header extends React.Component {
       <>
         <div
           className={
-            this.state.hasScrolled ? 'HeaderGroup HeaderScrolled' : 'HeaderGroup'
+            this.state.hasScrolled
+              ? 'HeaderGroup HeaderScrolled'
+              : 'HeaderGroup'
           }
         >
           <ContainerBS>
@@ -51,7 +53,7 @@ class Header extends React.Component {
               <img src={FifaPageLogo} alt="Fifa BNK48" />
             </Link>
             <Scrollspy
-              items={['Landing', 'Intro']}
+              items={['Landing', 'Intro', 'Follow', 'Join']}
               currentClassName="is-current"
               className="NotList NavGroup"
             >
@@ -80,25 +82,50 @@ class Header extends React.Component {
                 </AnchorLink>
               </li>
             </Scrollspy>
-            <button
+            {/* <button
               //href="https://www.facebook.com/FifaBnk48Fans/"
               //rel="noopener noreferrer"
               //target="_blank"
               onClick={this.toggleSoon}
-              className="Button ButtonMain"
+              className="Button ButtonMain GoToIcon GoToIconHover"
             >
               โปรเจคเลือกตั้ง
-            </button>
+            </button> */}
           </ContainerBS>
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggleSoon} className={this.props.className}>
+        {/* <Modal
+          isOpen={this.state.modal}
+          toggle={this.toggleSoon}
+          className={this.props.className}
+        >
           <ModalBody>
-           เร็วๆ นี้
+            <button class="CloseModal" conClick={this.toggleSoon}>
+              <i className="feather-icon icon-x" />
+            </button>
+            <div className="ModalContent">
+              <span>COMING SOON</span>
+              <p>ติดตามรายละเอียดได้เร็วๆนี้</p>
+              <p>
+                สามารถกดติดตามอัพเดทโปรเจคเลือกตั้งของฟีฟ่าได้ที่ Facebook
+                Fanpage
+              </p>
+              <a
+                href="https://web.facebook.com/FifaBnk48Fans/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="Button ButtonMain"
+              >
+                Fifa Bnk48 Thailand Fanclub
+                <i className="feather-icon icon-chevron-right" />
+              </a>
+            </div>
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={this.toggleSoon}>ปิด</Button>
+            <Button color="secondary" onClick={this.toggleSoon}>
+              ปิด
+            </Button>
           </ModalFooter>
-        </Modal>
+        </Modal> */}
       </>
     )
   }

@@ -46,7 +46,9 @@ const Intro = () => (
             <div className="row IntroListRow">
               <div className="col-12 col-md-6">
                 <div className="IntroList">
-                  <img alt="BNK48 2nd Generation" src={IconGen2} />
+                  <Fade right distance={'30px'} delay={50}>
+                    <img alt="BNK48 2nd Generation" src={IconGen2} />
+                  </Fade>
                   <div className="Text">
                     <h6>สมาชิกของ BNK48 รุ่น 2</h6>
                     <p>
@@ -66,7 +68,9 @@ const Intro = () => (
               </div>
               <div className="col-12 col-md-6">
                 <div className="IntroList">
-                  <img alt="ร้องเพลง Fifa BNK48" src={IconVoice} />
+                  <Fade right distance={'30px'} delay={100}>
+                    <img alt="ร้องเพลง Fifa BNK48" src={IconVoice} />
+                  </Fade>
                   <div className="Text">
                     <h6>มีลูกคอและเสียงร้องที่โดดเด่น</h6>
                     <p>
@@ -88,7 +92,12 @@ const Intro = () => (
             <div className="row IntroListRow">
               <div className="col-12 col-md-6">
                 <div className="IntroList">
-                  <img alt="ฤดูใหม่ Fifa BNK48 Tsugi no Season" src={IconSem} />
+                  <Fade right distance={'30px'} delay={150}>
+                    <img
+                      alt="ฤดูใหม่ Fifa BNK48 Tsugi no Season"
+                      src={IconSem}
+                    />
+                  </Fade>
                   <div className="Text">
                     <h6>เป็นตัวหลักในเพลงโปรโมทของรุ่น 2</h6>
                     <p>
@@ -108,10 +117,12 @@ const Intro = () => (
               </div>
               <div className="col-12 col-md-6">
                 <div className="IntroList">
-                  <img
-                    alt="mata anata no koto wo kangaete Fifa BNK48"
-                    src={IconSem5th}
-                  />
+                  <Fade right distance={'30px'} delay={200}>
+                    <img
+                      alt="mata anata no koto wo kangaete Fifa BNK48"
+                      src={IconSem5th}
+                    />
+                  </Fade>
                   <div className="Text">
                     <h6>
                       ผ่านออดิชั่นร้องเพลงจนได้เป็นตัวหลักของเพลงรองในซิงเกิลที่
@@ -146,7 +157,9 @@ const Intro = () => (
         <div className="Profile col-12">
           <RowCenterBS>
             <div className="col-lg-4">
-              <div className="ProfilePhoto" />
+              <Fade bottom distance={'60px'}>
+                <div className="ProfilePhoto" />
+              </Fade>
             </div>
             <div className="col-lg-6">
               <div className="ProfileText">
@@ -206,40 +219,46 @@ const Intro = () => (
             </div>
             <div className="col-lg-10">
               <RowBS>
-                <div className="ColPort3 Portfolio">
-                  <a
-                    href="https://www.instagram.com/p/Bn_gsA2nlUy/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div className="Item Hamburger" />
-                    <span className="Description">
-                      ถ่ายแฟชั่นนิตยสาร HAMBURGER
-                    </span>
-                  </a>
-                </div>
-                <div className="ColPort3 Portfolio">
-                  <a
-                    href="https://www.instagram.com/p/BnlQ4JhH1E8/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div className="Item ThaiBall" />
-                    <span className="Description">BNK48 X ช้างศึก</span>
-                  </a>
-                </div>
-                <div className="ColPort3 Portfolio">
-                  <a
-                    href="https://www.instagram.com/p/BmiEdzMnW-R/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div className="Item GDC" />
-                    <span className="Description">
-                      งานกาล่า "Girl Don't Cry"
-                    </span>
-                  </a>
-                </div>
+                <Fade bottom distance={'60px'}>
+                  <div className="ColPort3 Portfolio">
+                    <a
+                      href="https://www.instagram.com/p/Bn_gsA2nlUy/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <div className="Item Hamburger" />
+                      <span className="Description">
+                        ถ่ายแฟชั่นนิตยสาร HAMBURGER
+                      </span>
+                    </a>
+                  </div>
+                </Fade>
+                <Fade bottom distance={'60px'} delay="100">
+                  <div className="ColPort3 Portfolio">
+                    <a
+                      href="https://www.instagram.com/p/BnlQ4JhH1E8/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <div className="Item ThaiBall" />
+                      <span className="Description">BNK48 X ช้างศึก</span>
+                    </a>
+                  </div>
+                </Fade>
+                <Fade bottom distance={'60px'} delay="200">
+                  <div className="ColPort3 Portfolio">
+                    <a
+                      href="https://www.instagram.com/p/BmiEdzMnW-R/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <div className="Item GDC" />
+                      <span className="Description">
+                        งานกาล่า "Girl Don't Cry"
+                      </span>
+                    </a>
+                  </div>
+                </Fade>
               </RowBS>
             </div>
           </RowCenterBS>

@@ -9,8 +9,8 @@ import VoovIcon from '../images/social-logo/voov.png'
 import {
   ContainerNoRowBS,
   RowBS,
-  RowCenterBS,
-  ContainerBS,
+  //RowCenterBS,
+  //ContainerBS,
 } from '../components/bootstrap_layout'
 
 const Follow = () => (
@@ -19,15 +19,15 @@ const Follow = () => (
     <ContainerNoRowBS>
       <RowBS>
         <div className="SectionTitle">
-          <h5>DISCOVER MORE</h5>
-          <h2>สามารถติดตามฟีฟ่าได้จากช่องทางใดบ้าง?</h2>
+          <h5>Follow Up</h5>
+          <h2>ติดตามฟีฟ่าได้ที่ไหน?</h2>
         </div>
       </RowBS>
       <RowBS>
         <div className="col-12">
           <div className="FollowBoxGroup row">
             <Fade bottom distance={'50px'}>
-              <div className="col-lg-3">
+              <div className="col-6 col-lg-3">
                 <a
                   href="https://www.facebook.com/bnk48official.fifa/"
                   rel="noopener noreferrer"
@@ -55,7 +55,7 @@ const Follow = () => (
               </div>
             </Fade>
             <Fade bottom distance={'50px'} delay={150}>
-              <div className="col-lg-3">
+              <div className="col-6 col-lg-3">
                 <a
                   href="https://www.instagram.com/fifa.bnk48official/"
                   rel="noopener noreferrer"
@@ -83,7 +83,7 @@ const Follow = () => (
               </div>
             </Fade>
             <Fade bottom distance={'50px'} delay={300}>
-              <div className="col-lg-3">
+              <div className="col-6 col-lg-3">
                 <a
                   href="http://www.voovlive.com/s_url/F8V0VY1180"
                   rel="noopener noreferrer"
@@ -111,7 +111,7 @@ const Follow = () => (
               </div>
             </Fade>
             <Fade bottom distance={'50px'} delay={450}>
-              <div className="col-lg-3">
+              <div className="col-6 col-lg-3">
                 <a
                   href="https://www.facebook.com/FifaBnk48Fans/"
                   rel="noopener noreferrer"

@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Favicon from '../images/favicon.png'
 
+import Footer from '../components/footer'
+
 //import Header from './header'
 //import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 //import '../scss/layout.scss'
@@ -35,6 +37,7 @@ const Layout = ({ children }) => (
           <html lang="th" />
         </Helmet>
         {children}
+        <Footer />
       </>
     )}
   />

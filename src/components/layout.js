@@ -66,7 +66,7 @@ const Layout = ({ children }) => (
               content: 'Fifa BNK48 Fansite',
             },
             {
-              name: 'og:description',
+              property: 'og:description',
               content:
                 'เว็บไซต์แฟนคลับของฟีฟ่าแห่งวง BNK48 ทำความรู้จักฟีฟ่าพร้อมทั้งช่องทางการติดตามต่างๆ',
             },

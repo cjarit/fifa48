@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { withPrefix } from 'gatsby'
 
 import Favicon from '../images/favicon.png'
 
@@ -45,7 +46,7 @@ const Layout = ({ children }) => (
             },
             {
               property: 'og:image',
-              content: 'https://i.imgur.com/H1oqs1a.png',
+              content: `${withPrefix('/src/img/share-image.png')}`,
             },
             {
               property: 'og:type',
@@ -63,6 +64,23 @@ const Layout = ({ children }) => (
               property: 'og:description',
               content:
                 'เว็บไซต์แฟนคลับของฟีฟ่าแห่งวง BNK48 ทำความรู้จักฟีฟ่าพร้อมทั้งช่องทางการติดตามต่างๆ',
+            },
+            {
+              name: 'twitter:title',
+              content: 'Fifa BNK48 Fansite : เว็บแฟนคลับฟีฟ่า BNK48',
+            },
+            {
+              name: 'twitter:description',
+              content:
+                'เว็บไซต์แฟนคลับของฟีฟ่าแห่งวง BNK48 ทำความรู้จักฟีฟ่าพร้อมทั้งช่องทางการติดตามต่างๆ',
+            },
+            {
+              name: 'twitter:image',
+              content: 'https://i.imgur.com/H1oqs1a.png',
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image',
             },
           ]}
           link={[

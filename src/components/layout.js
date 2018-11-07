@@ -37,6 +37,10 @@ const Layout = ({ children }) => (
               content: 'http://www.fifabnk48.com/',
             },
             {
+              name: 'google-site-verification',
+              content: '4lg4BG6t6OL1Hgy0juQ-OEYOJWiTTPRrV9UxLJWPwKY',
+            },
+            {
               name: 'robots',
               content: 'all',
             },

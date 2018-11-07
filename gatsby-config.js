@@ -28,6 +28,13 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-128888836-1",
+      },
+    },
   ],
   pathPrefix: `/src/img`,
+  
 }

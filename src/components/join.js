@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import FifaArenaLogo from '../images/social-logo/fifa-arena.png'
 import QRSquare from '../images/follow/fifa-sq.jpeg'
@@ -36,7 +37,7 @@ const Join = () => (
             <div className="FollowTicketGroup">
               <Fade bottom distance={'80px'} delay={50}>
                 <div className="FollowTicketWrapper">
-                  <a
+                  <OutboundLink
                     href="https://line.me/ti/g2/STVGPEVBI6"
                     className="FollowTicket"
                     rel="noopener noreferrer"
@@ -56,12 +57,12 @@ const Join = () => (
                     <div className="Signifier">
                       <i className="feather-icon icon-chevron-right" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 </div>
               </Fade>
               <Fade bottom distance={'80px'} delay={100}>
                 <div className="FollowTicketWrapper">
-                  <a
+                  <OutboundLink
                     href="http://line.me/ti/g/_FpgxVbFDo#~"
                     className="FollowTicket"
                     rel="noopener noreferrer"
@@ -81,12 +82,12 @@ const Join = () => (
                     <div className="Signifier">
                       <i className="feather-icon icon-chevron-right" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 </div>
               </Fade>
               <Fade bottom distance={'80px'} delay={150}>
                 <div className="FollowTicketWrapper">
-                  <a
+                  <OutboundLink
                     href="https://web.facebook.com/profile.php?id=1679122458883284"
                     className="FollowTicket"
                     rel="noopener noreferrer"
@@ -106,7 +107,7 @@ const Join = () => (
                     <div className="Signifier">
                       <i className="feather-icon icon-chevron-right" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 </div>
               </Fade>
             </div>

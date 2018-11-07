@@ -2,6 +2,7 @@ import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 //import { Parallax } from 'react-scroll-parallax'
 import Fade from 'react-reveal/Fade'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import { ContainerBS } from './bootstrap_layout'
 
@@ -76,7 +77,7 @@ const Landing = props => (
         </div>
         <div className="SnsTopLabel">
           <h5>Follow Fifa</h5>
-          <a
+          <OutboundLink
             href="https://www.facebook.com/bnk48official.fifa/"
             rel="noopener noreferrer"
             target="_blank"
@@ -84,8 +85,8 @@ const Landing = props => (
           >
             <img alt="Fifa BNK48 Facebook Official" src={FacebookIcon} />
             <h6>fifa.bnk48official</h6>
-          </a>
-          <a
+          </OutboundLink>
+          <OutboundLink
             href="https://www.instagram.com/fifa.bnk48official/"
             rel="noopener noreferrer"
             target="_blank"
@@ -93,7 +94,7 @@ const Landing = props => (
           >
             <img alt="Fifa BNK48 Instagram Official" src={InstagramIcon} />
             <h6>bnk48official.fifa</h6>
-          </a>
+          </OutboundLink>
           <div className="LineDown" />
         </div>
         <div className="DotPatternTop">

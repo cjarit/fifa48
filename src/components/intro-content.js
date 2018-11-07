@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 class IntroContent extends Component {
   constructor(props) {
@@ -27,22 +28,22 @@ class IntroContent extends Component {
         <div className={ReadLessMoreConctent}>
         <p>
           ฟีฟ่า (ปวีณ์ธิดา สกุลพิพัฒน์) เป็นหนึ่งในสมาชิกรุ่นที่ 2 ของวงไอดอลไทย{' '}
-          <a
+          <OutboundLink
             href="https://th.wikipedia.org/wiki/บีเอ็นเคโฟร์ตีเอต"
             rel="noopener noreferrer"
             target="_blank"
           >
             BNK48
-          </a>{' '}
+          </OutboundLink>{' '}
           ซึ่ง เป็นวงน้องสาวของวงไอดอลญี่ปุ่นชื่อดัง{' '}
-          <a
+          <OutboundLink
             href="https://th.wikipedia.org/wiki/เอเคบีโฟร์ตีเอต"
             rel="noopener noreferrer"
             target="_blank"
           >
             {' '}
             AKB48
-          </a>{' '}
+          </OutboundLink>{' '}
           จุดเด่นทางด้านความสามารถของฟีฟ่าในวงคือเรื่องร้องเพลง
           ซึ่งฟีฟ่าเป็นเพียงไม่กี่คนในวงที่สามารถร้องเพลงลูกทุ่งและใช้ลูกคอในการร้องได้ดี อีกทั้งยังสามารถทำหน้าที่ MC พิธีกรดำเนินการแสดงเอนเทอร์เทนผู้ฟังได้ดีอีกด้วย
         </p>

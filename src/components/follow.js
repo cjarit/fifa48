@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Fade from 'react-reveal/Fade'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import FacebookIcon from '../images/social-logo/fb.png'
 import InstagramIcon from '../images/social-logo/ig.png'
@@ -28,7 +29,7 @@ const Follow = () => (
           <div className="FollowBoxGroup row">
             <Fade bottom distance={'50px'}>
               <div className="col-6 col-lg-3">
-                <a
+                <OutboundLink
                   href="https://www.facebook.com/bnk48official.fifa/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -51,12 +52,12 @@ const Follow = () => (
                       <i className="feather-icon icon-chevron-right" />
                     </span>
                   </div>
-                </a>
+                </OutboundLink>
               </div>
             </Fade>
             <Fade bottom distance={'50px'} delay={150}>
               <div className="col-6 col-lg-3">
-                <a
+                <OutboundLink
                   href="https://www.instagram.com/fifa.bnk48official/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -79,12 +80,12 @@ const Follow = () => (
                       <i className="feather-icon icon-chevron-right" />
                     </span>
                   </div>
-                </a>
+                </OutboundLink>
               </div>
             </Fade>
             <Fade bottom distance={'50px'} delay={300}>
               <div className="col-6 col-lg-3">
-                <a
+                <OutboundLink
                   href="http://www.voovlive.com/s_url/F8V0VY1180"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -107,12 +108,12 @@ const Follow = () => (
                       <i className="feather-icon icon-chevron-right" />
                     </span>
                   </div>
-                </a>
+                </OutboundLink>
               </div>
             </Fade>
             <Fade bottom distance={'50px'} delay={450}>
               <div className="col-6 col-lg-3">
-                <a
+                <OutboundLink
                   href="https://www.facebook.com/FifaBnk48Fans/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -135,7 +136,7 @@ const Follow = () => (
                       <i className="feather-icon icon-chevron-right" />
                     </span>
                   </div>
-                </a>
+                </OutboundLink>
               </div>
             </Fade>
           </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+
 
 import {
   //ContainerNoRowBS,
@@ -15,21 +17,21 @@ const Footer = () => (
           <p>© 2018 สนามบอลของฟีฟ่า</p>
           <p>
             Made by 
-            <a
+            <OutboundLink
               href="https://www.instagram.com/pop_jc/"
               rel="noopener noreferrer"
               target="_blank"
               className="Maker"
             >
                pop_jc
-            </a>
+            </OutboundLink>
             | v.1.0.0
           </p>
           <hr></hr>
-          <a href="mailto:cjarit@icloud.com"
+          <OutboundLink href="mailto:cjarit@icloud.com"
           rel="noopener noreferrer"
           target="_blank"
-          className="Notice">แจ้งปัญหา / ข้อเสนอแนะ</a>
+          className="Notice">แจ้งปัญหา / ข้อเสนอแนะ</OutboundLink>
         </div>
       </RowBS>
     </div>

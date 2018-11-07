@@ -1,5 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import IntroContent from '../components/intro-content'
 
@@ -55,14 +56,14 @@ const Intro = () => (
                       เป็น 1 ในสมาชิกรุ่น 2 ของวงไอดอลอันดับ 1 ในไทย
                       จากการคัดเลือกผู้สมัครกว่าหมื่นคน
                     </p>
-                    <a
+                    <OutboundLink
                       href="https://www.instagram.com/p/BiJwl3knsJ9/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <span>จุดเริ่มต้นของฟีฟ่า</span>
                       <i className="feather-icon icon-chevron-right" />
-                    </a>
+                    </OutboundLink>
                   </div>
                 </div>
               </div>
@@ -77,14 +78,14 @@ const Intro = () => (
                       เป็นคนที่มีความสามารถโดดเด่นในการร้องเพลง
                       สามารถร้องเพลงลูกทุ่งได้ไพเราะ
                     </p>
-                    <a
+                    <OutboundLink
                       href="https://www.facebook.com/bnk48official.fifa/videos/2178008865781066/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <span>ดูคลิปร้องเพลง</span>
                       <i className="feather-icon icon-chevron-right" />
-                    </a>
+                    </OutboundLink>
                   </div>
                 </div>
               </div>
@@ -104,14 +105,14 @@ const Intro = () => (
                       เป็น 1 ใน 16 คน ที่ซึ่งได้รับเลือก (เซมบัตสึ) ให้แสดงเพลง
                       “ฤดูใหม่” ซึ่งเป็นเพลงโปรโมทของรุ่น 2
                     </p>
-                    <a
+                    <OutboundLink
                       href="https://youtu.be/A2VrbwgWjT0"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <span>ดู MV เพลงฤดูใหม่</span>
                       <i className="feather-icon icon-chevron-right" />
-                    </a>
+                    </OutboundLink>
                   </div>
                 </div>
               </div>
@@ -132,14 +133,14 @@ const Intro = () => (
                       ติด 11 ตัวจริง (เซมบัตสึ) ที่ได้แสดงเพลงรองในซิงเกิลที่ 5
                       จากการออดิชั่นทั้งรุ่น 1 รุ่น 2
                     </p>
-                    <a
+                    <OutboundLink
                       href="https://youtu.be/IDnIu_M9SdM"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <span>ดูคลิปออดิชั่น</span>
                       <i className="feather-icon icon-chevron-right" />
-                    </a>
+                    </OutboundLink>
                   </div>
                 </div>
               </div>
@@ -221,7 +222,7 @@ const Intro = () => (
               <RowBS>
                 <Fade bottom distance={'60px'}>
                   <div className="ColPort3 Portfolio">
-                    <a
+                    <OutboundLink
                       href="https://www.instagram.com/p/Bn_gsA2nlUy/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -230,24 +231,24 @@ const Intro = () => (
                       <span className="Description">
                         ถ่ายแฟชั่นนิตยสาร HAMBURGER
                       </span>
-                    </a>
+                    </OutboundLink>
                   </div>
                 </Fade>
                 <Fade bottom distance={'60px'} delay="100">
                   <div className="ColPort3 Portfolio">
-                    <a
+                    <OutboundLink
                       href="https://www.instagram.com/p/BnlQ4JhH1E8/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <div className="Item ThaiBall" />
                       <span className="Description">BNK48 X ช้างศึก</span>
-                    </a>
+                    </OutboundLink>
                   </div>
                 </Fade>
                 <Fade bottom distance={'60px'} delay="200">
                   <div className="ColPort3 Portfolio">
-                    <a
+                    <OutboundLink
                       href="https://www.instagram.com/p/BmiEdzMnW-R/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -256,7 +257,7 @@ const Intro = () => (
                       <span className="Description">
                         งานกาล่า "Girl Don't Cry"
                       </span>
-                    </a>
+                    </OutboundLink>
                   </div>
                 </Fade>
               </RowBS>

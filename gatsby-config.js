@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Fifa BNK48 Fansite',
+    siteUrl: `https://www.fifabnk48.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -33,6 +34,9 @@ module.exports = {
       options: {
         trackingId: "UA-128888836-1",
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
     },
   ],
   pathPrefix: `/src/img`,

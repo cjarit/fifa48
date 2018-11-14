@@ -79,11 +79,11 @@ const Intro = () => (
                       สามารถร้องเพลงลูกทุ่งได้ไพเราะ
                     </p>
                     <OutboundLink
-                      href="https://www.facebook.com/bnk48official.fifa/videos/2178008865781066/"
+                      href="https://www.youtube.com/watch?v=qWDqOrV8ua8"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <span>ดูคลิปร้องเพลง</span>
+                      <span>ดูคลิปร้องเพลงลูกทุ่ง</span>
                       <i className="feather-icon icon-chevron-right" />
                     </OutboundLink>
                   </div>

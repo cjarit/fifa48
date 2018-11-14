@@ -1,7 +1,6 @@
 import React from 'react'
 
-import App from '../components/app'
-import Layout from '../components/layout';
+import HomePage from '../components/homepage'
 
 import '../vendors/feather_icon/css/feather_icon.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -15,10 +14,6 @@ import '../scss/intro.scss'
 import '../scss/join.scss'
 import '../scss/footer.scss'
 
-const IndexPage = () => (
-  <Layout>
-    <App></App>
-  </Layout>
-)
+const IndexPage = () => <HomePage />
 
 export default IndexPage

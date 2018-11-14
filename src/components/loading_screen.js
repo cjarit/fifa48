@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const LoadingScreen = () => (
-  <div className="loading-grid-row">
-    <div className="loading-col">
-      <ul className="loading">
-        <li />
-        <li />
-        <li />
-      </ul>
-    </div>
-  </div>
-)
+export default class LoadingScreen extends Component {
+  state = {
+    loading: true,
+  }
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1500)
+  }
 
-export default LoadingScreen
+  render() {
+    return (
+      <div
+        className={
+          this.state.loading ? 'loading-grid-row' : 'loading-grid-row hide'
+        }
+      >
+        <div className="loading-col">
+          <ul className="loading">
+            <li />
+            <li />
+            <li />
+          </ul>
+        </div>
+      </div>
+    )
+  }
+}

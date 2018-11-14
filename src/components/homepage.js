@@ -8,19 +8,15 @@ import Intro from '../components/intro'
 import Follow from '../components/follow'
 import Join from '../components/join'
 import Footer from '../components/footer'
-
-// import {
-//   ContainerNoRowBS,
-//   RowBS,
-//   RowCenterBS,
-//   ContainerBS,
-// } from '../components/bootstrap_layout'
+import LoadingScreen from '../components/loading_screen'
 
 export default class HomePage extends Component {
+
   render() {
     return (
       <>
         <Layout>
+          <LoadingScreen></LoadingScreen>
           <Header />
           <Landing />
           <Intro />

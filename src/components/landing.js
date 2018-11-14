@@ -29,7 +29,7 @@ const Landing = props => (
           slowerScrollRate
         > */}
         <div className="EffectFront">
-          <Fade bottom distance={'150px'} delay={200}>
+          <Fade bottom distance={'150px'} delay={1700}>
             {/* <img alt="BNK48" src={FrontGraphic} /> */}
             <FrontGraphic />
           </Fade>
@@ -45,7 +45,7 @@ const Landing = props => (
           slowerScrollRate
         > */}
         <div className="MainIdol">
-          <Fade bottom distance={'50px'}>
+          <Fade bottom distance={'50px'} delay={1500}>
             {/* <img alt="Fifa BNK48" src={MainIdolImage} /> */}
             <FifaMain />
           </Fade>
@@ -59,12 +59,12 @@ const Landing = props => (
         > */}
         {/* <img alt="BNK48" src={BackGraphic} /> */}
         <div className="EffectBack">
-          <Fade bottom distance={'100px'} delay={500}>
+          <Fade bottom distance={'100px'} delay={2000}>
             <BackGraphic />
           </Fade>
         </div>
         {/* </Parallax> */}
-        <Fade bottom distance={'200px'} delay={800}>
+        <Fade bottom distance={'200px'} delay={2300}>
           <div className="CircleBg" />
         </Fade>
         <div className="TitleTag">

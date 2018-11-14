@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Fifa BNK48 Fansite',
+    title: 'Fifa BNK48 Fansite | ทำความรู้จัก ฟีฟ่า BNK48 ไอดอลเสียงใสที่สุดของวง',
     siteUrl: `https://www.fifabnk48.com`,
   },
   plugins: [
